@@ -1,0 +1,134 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.videoact {
+  width: 100%;
+  position: relative;
+  display: block;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+
+  &__leading {
+    float: left;
+  };
+
+  &__trailing {
+    float: right;
+  };
+
+  &__middle {
+    width: auto;
+    overflow: hidden;
+  };
+
+  &__progress {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+
+    &__inner {
+      width: 100%;
+      display: table;
+    }
+    &__middle {
+      display: table-cell;
+      width: 100%;
+    }
+    &__bar {
+      display: block;
+      width: 100%;
+      height: 12px;
+      border-radius: 12px;
+      border: solid 1px rgba(#fff, 0.66);
+      box-sizing: border-box;
+      padding: 1px;
+    }
+    &__innerbar {
+      display: inline-block;
+      height: 8px;
+      border-radius: 8px;
+      background-color: #fff;
+      min-width: 8px !important;
+    }
+    &__time { 
+      font-size: 12px;
+      font-family: "Lucida Console", Monaco, monospace;
+      padding: 0 12px;
+      display: table-cell;
+      line-height: 12px;
+    }
+  };
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    cursor: pointer;
+  };
+
+  &__full {
+    height: 100% !important;
+    width: 100% !important;
+  };
+
+  &__full &__video {
+    height: 100%;
+  };
+
+  &__controls {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    box-sizing: border-box;
+    padding: 38px 6px 7px;
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+    font-size: 0;
+    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+    
+    &__btn {
+      display: inline-block;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: none;
+      width: 32px;
+      height: 32px;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: rgba(0,0,0,0);
+      transition: background 0.3s linear;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(0,0,0,0.66);
+      }
+    }
+
+    &__icon {
+      fill: #fff;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  &:hover &__controls {
+    opacity: 1;
+  }
+
+  &__hidden {
+    display: none !important;
+  };
+
+}

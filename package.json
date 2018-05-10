@@ -1,0 +1,63 @@
+{
+  "name": "videoact",
+  "version": "0.1.0",
+  "description": "videoact is a highly configrable html5 video component built from the ground up using React library.",
+  "main": "lib/index.js",
+  "repository": "https://github.com/zkareemz/videoact",
+  "author": "@zkareemz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkareemz/videoact/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "html5",
+    "video",
+    "player",
+    "web",
+    "video-component",
+    "video-player",
+    "html5-video",
+    "fullscreen"
+  ],
+  "scripts": {
+    "prepublishOnly": "./node_modules/.bin/yarn build",
+    "test": "./node_modules/.bin/jest -u",
+    "cover": "./node_modules/.bin/jest --coverage -u",
+    "build": "rm -rf ./lib && ./node_modules/.bin/webpack --mode production --config ./webpack/webpack.prod.babel.js",
+    "dev": "./node_modules/.bin/webpack --mode development --config ./webpack/webpack.dev.babel.js",
+    "example": "yarn build && ./node_modules/.bin/webpack-dev-server --host 0.0.0.0 --mode development --config ./webpack/webpack.example.babel.js & open http://localhost:8080/"
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "jest": "^22.4.3",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "sass-loader": "^7.0.1",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.21.0",
+    "svgr": "^1.9.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2",
+    "yarn": "^1.6.0"
+  },
+  "dependencies": {}
+}
